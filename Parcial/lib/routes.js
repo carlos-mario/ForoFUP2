@@ -18,3 +18,11 @@ FlowRouter.route('/frutas',{
 		BlazeLayout.render('MainLayout', {main: 'Frutas'});
 	}
 });
+
+FlowRouter.route('/deportes',{
+	name: 'deportes',
+	action(){
+		BlazeLayout.render('MainLayout', {main: 'Deportes'});
+	}
+});
+
