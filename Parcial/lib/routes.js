@@ -12,6 +12,7 @@ FlowRouter.route('/vehiculo',{
 	}
 });
 
+<<<<<<< HEAD
 FlowRouter.route('/figuras',{
 	name: 'figuras',
 	action(){
@@ -19,9 +20,25 @@ FlowRouter.route('/figuras',{
 	}
 });
 
+=======
+FlowRouter.route('/libro',{
+	name: 'libro',
+	action(){
+		BlazeLayout.render('MainLayout', {main: 'Libro'});
+
+FlowRouter.route('/plantas',{
+	name: 'plantas',
+	action(){
+		BlazeLayout.render('MainLayout', {main: 'Plantas'});
+	}
+});
+
+
+>>>>>>> 681c49afa750b96f85a5feb67b0dba745ba4362e
 FlowRouter.route('/deportes',{
 	name: 'deportes',
 	action(){
 		BlazeLayout.render('MainLayout', {main: 'Deportes'});
+
 	}
 });
