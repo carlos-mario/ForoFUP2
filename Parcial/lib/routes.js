@@ -16,6 +16,9 @@ FlowRouter.route('/libro',{
 	name: 'libro',
 	action(){
 		BlazeLayout.render('MainLayout', {main: 'Libro'});
+	}
+});
+		
 
 FlowRouter.route('/plantas',{
 	name: 'plantas',
