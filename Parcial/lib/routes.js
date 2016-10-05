@@ -16,6 +16,14 @@ FlowRouter.route('/frutas',{
 	name: 'frutas',
 	action(){
 		BlazeLayout.render('MainLayout', {main: 'Frutas'});
+}
+});
+
+FlowRouter.route('/plantas',{
+	name: 'plantas',
+	action(){
+		BlazeLayout.render('MainLayout', {main: 'Plantas'});
+
 	}
 });
 
@@ -25,4 +33,3 @@ FlowRouter.route('/deportes',{
 		BlazeLayout.render('MainLayout', {main: 'Deportes'});
 	}
 });
-
