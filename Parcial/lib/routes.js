@@ -12,6 +12,7 @@ FlowRouter.route('/vehiculo',{
 	}
 });
 
+
 FlowRouter.route('/figuras',{
 	name: 'figuras',
 	action(){
