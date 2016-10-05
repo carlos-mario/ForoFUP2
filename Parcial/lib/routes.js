@@ -12,7 +12,6 @@ FlowRouter.route('/vehiculo',{
 	}
 });
 
-<<<<<<< HEAD
 FlowRouter.route('/figuras',{
 	name: 'figuras',
 	action(){
@@ -20,7 +19,6 @@ FlowRouter.route('/figuras',{
 	}
 });
 
-=======
 FlowRouter.route('/libro',{
 	name: 'libro',
 	action(){
@@ -28,7 +26,6 @@ FlowRouter.route('/libro',{
 	}
 });
 		
-
 FlowRouter.route('/plantas',{
 	name: 'plantas',
 	action(){
@@ -36,8 +33,6 @@ FlowRouter.route('/plantas',{
 	}
 });
 
-
->>>>>>> 681c49afa750b96f85a5feb67b0dba745ba4362e
 FlowRouter.route('/deportes',{
 	name: 'deportes',
 	action(){
