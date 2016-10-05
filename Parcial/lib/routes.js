@@ -11,3 +11,10 @@ FlowRouter.route('/vehiculo',{
 		BlazeLayout.render('MainLayout', {main: 'Vehiculo'});
 	}
 });
+
+FlowRouter.route('/plantas',{
+	name: 'plantas',
+	action(){
+		BlazeLayout.render('MainLayout', {main: 'Plantas'});
+	}
+});
