@@ -18,7 +18,11 @@ es5-shim@4.6.14                # ECMAScript 5 compatibility for older browsers.
 ecmascript@0.5.8              # Enable ECMAScript2015+ syntax in app code
 shell-server@0.2.1            # Server-side component of the `meteor shell` command
 
+<<<<<<< HEAD
 # fourseven:scss
+=======
+#fourseven:scss
+>>>>>>> c4b5c56a217b918fe269cab1d7210a648026509a
 # materialize:materialize
 
 kadira:flow-router

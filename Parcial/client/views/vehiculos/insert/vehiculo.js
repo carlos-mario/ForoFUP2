@@ -14,7 +14,12 @@ Template.Vehiculo.events({
       var valor = event.target.valor.value;
 
       var vehiculo = {
-        características: marca + " " + modelo + " " + color + " " + numero_puertas + " " + valor        
+
+        marca: marca, 
+        modelo: modelo,
+        color: color,
+        numero_puertas: numero_puertas,
+        valor: valor        
       }
 
       Meteor.call('VehiculosForm.insert', vehiculo);

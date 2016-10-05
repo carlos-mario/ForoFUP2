@@ -13,12 +13,22 @@ FlowRouter.route('/vehiculo',{
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 FlowRouter.route('/frutas',{
 	name: 'frutas',
 	action(){
 		BlazeLayout.render('MainLayout', {main: 'Frutas'});
 }
 });
+=======
+FlowRouter.route('/figuras',{
+	name: 'figuras',
+	action(){
+		BlazeLayout.render('MainLayout', {main: 'Figuras'});
+	}
+});
+
+>>>>>>> c4b5c56a217b918fe269cab1d7210a648026509a
 =======
 FlowRouter.route('/libro',{
 	name: 'libro',
@@ -38,6 +48,7 @@ FlowRouter.route('/plantas',{
 });
 
 
+>>>>>>> 681c49afa750b96f85a5feb67b0dba745ba4362e
 FlowRouter.route('/deportes',{
 	name: 'deportes',
 	action(){
