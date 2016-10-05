@@ -16,7 +16,13 @@ Template.Deportes.events({
       var espacio_donde_ejecuta = event.target.espacio_donde_ejecuta.value;
 
       var deporte = {
-        características: nom_de_deporte + " " + num_jugadores + " " + color_unifor + " " + color_unifor_2 + " " + instrumento+ " " + horario+ " " + espacio_donde_ejecuta+ " "           
+        nombre_del_deporte: nom_de_deporte,
+        numero_de_jugadores: num_jugadores,
+        color_del_uniforme: color_unifor,
+        color_de_uniforme_del_oponente: color_unifor_2,
+        instrumeto_deportivo: instrumento,
+        horario_de_juego: horario,
+        campo_donde_se_juega: espacio_donde_ejecuta    
       }
 
       Meteor.call('DeportesForm.insert', deporte);
