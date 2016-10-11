@@ -1,8 +1,15 @@
 FlowRouter.route('/',{
-	name: 'home',
-	action(){
-		BlazeLayout.render('HomeLayout')
-	}
+    name: 'home',
+    action() {
+        BlazeLayout.render('HomeLayout');
+    }
+});
+
+FlowRouter.route('/test',{
+    name: 'test',
+    action() {
+        BlazeLayout.render('MainLayout', {main: 'Test'});
+    }
 });
 
 FlowRouter.route('/vehiculo',{
@@ -10,6 +17,20 @@ FlowRouter.route('/vehiculo',{
 	action(){
 		BlazeLayout.render('MainLayout', {main: 'Vehiculo'});
 	}
+});
+
+FlowRouter.route('/vehiculos/:id',{
+    name: 'edit.vehiculo',
+    action() {
+        BlazeLayout.render('MainLayout', {main: 'EditVehiculo'});
+    }
+});
+
+FlowRouter.route('/vehiculos',{
+    name: 'vehiculos',
+    action() {
+        BlazeLayout.render('MainLayout', {main: 'Vehiculos'});
+    }
 });
 
 FlowRouter.route('/frutas',{

@@ -1,0 +1,38 @@
+<Template name="Vehiculos">
+    <h4>Vehiculos</h4>
+    <div class="vehiculos-list">        
+        <div class="card">
+            <div class="card-content">
+                <table class="highlight responsive-table">
+                    <thead>
+                    <tr>
+                        <th data-field="id">Marca</th>
+                        <th data-field="modelo">Modelo</th>
+                        <th data-field="color">Color</th>
+						<th data-field="num_puertas">Numero de puertas</th>
+                        <th data-field="valor">Valor</th>
+                        <th> </th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {{#each vehiculos}}
+                        <tr>
+                            <td>{{marca}}</td>
+                            <td>{{modelo}}</td>
+                            <td>{{color}}</td>
+							<td>{{numero_puertas}}</td>
+							<td>{{valor}}</td>
+                            <td>
+                                <a href="/vehiculos/{{_id}}" class="btn-floating red right-align">
+                                    <i class="large material-icons">mode_edit</i>
+                                </a>
+                            </td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</Template>

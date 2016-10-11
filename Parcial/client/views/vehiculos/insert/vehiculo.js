@@ -1,11 +1,16 @@
-Meteor.subscribe('vehiculos_form');
+Template.Vehiculo.onCreated(function () {
+    var self = this;
+    self.autorun(function () {
+        self.subscribe('vehiculos_form');
+    });
+});
 
 Template.Vehiculo.helpers({
 
 });
 
 Template.Vehiculo.events({
-    'submit' (event){
+    'submit': function (event){
       event.preventDefault();
       var marca = event.target.marca.value;
       var modelo = event.target.modelo.value;
@@ -24,7 +29,11 @@ Template.Vehiculo.events({
 
       Meteor.call('VehiculosForm.insert', vehiculo);
 
-      console.log("Vehiculo: ", vehiculo);
-      event.target.marca.value="";    
-  }
+  	  event.target.marca.value = "";
+      event.target.modelo.value = "";
+      event.target.color.value = "";
+      event.target.numero_puertas.value = "";
+	    event.target.valor.value = "";
+      console.log("Vehiculo: ", vehiculo);          
+    }
 });

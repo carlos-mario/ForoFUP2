@@ -1,4 +1,4 @@
-VehiculosForm =new Meteor.Collection('VehiculosForm');
+VehiculosForm = new Meteor.Collection('vehiculos_form');
 
 VehiculosForm.allow({
 	insert: function(vehiculoId, doc){
@@ -10,4 +10,4 @@ VehiculosForm.allow({
 	remove: function(vehiculoId, doc){
 		return vehiculoId;
 	}
-})
+});

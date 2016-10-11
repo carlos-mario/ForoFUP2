@@ -5,7 +5,7 @@ Meteor.methods({
 	'VehiculosForm.update': function(params){
 		return VehiculosForm.update({_id: params.id}, params.params);
 	},
-	'VehiculosForm.remove': function(params){
-		return VehiculosForm.remove(params);
-	}
-})
+	'Fields.remove': function (params) {
+        VehiculosForm.remove(params);
+    },
+});
