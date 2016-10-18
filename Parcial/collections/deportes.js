@@ -1,13 +1,13 @@
-DeportesForm =new Meteor.Collection('DeportesForm');
+DeportesForm =new Meteor.Collection('deportes_form');
 
 DeportesForm.allow({
-	insert: function(deportesId, doc){
-		return deportesId;
+	insert: function(deporteId, doc){
+		return deporteId;
 	},
-	update: function(deportesId, doc, fields, modifier){
-		return deportesId;
+	update: function(deporteId, doc, fields, modifier){
+		return deporteId;
 	},
-	remove: function(deportesId, doc){
-		return deportesId;
+	remove: function(deporteId, doc){
+		return deporteId;
 	}
-})
+});

@@ -62,10 +62,24 @@ FlowRouter.route('/plantas',{
 	}
 });
 
-FlowRouter.route('/deportes',{
-	name: 'deportes',
+FlowRouter.route('/deporte',{
+	name: 'deporte',
 	action(){
-		BlazeLayout.render('MainLayout', {main: 'Deportes'});
+		BlazeLayout.render('MainLayout', {main: 'Deporte'});
 
 	}
+});
+
+FlowRouter.route('/deportes/:id',{
+    name: 'edit.deporte',
+    action() {
+        BlazeLayout.render('MainLayout', {main: 'EditDeporte'});
+    }
+});
+
+FlowRouter.route('/deportes',{
+    name: 'deportes',
+    action() {
+        BlazeLayout.render('MainLayout', {main: 'Deportes'});
+    }
 });
