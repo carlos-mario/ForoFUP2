@@ -82,4 +82,28 @@ FlowRouter.route('/deportes',{
     action() {
         BlazeLayout.render('MainLayout', {main: 'Deportes'});
     }
+
 });
+
+//RUTAS DE FIGURAS
+FlowRouter.route('/figura',{
+    name: 'figura',
+    action() {
+        BlazeLayout.render('MainLayout', {main: 'Figura'});
+    }
+});
+
+FlowRouter.route('/figuras/:id',{
+    name: 'edit.figura',
+    action() {
+        BlazeLayout.render('MainLayout', {main: 'EditFigura'});
+    }
+});
+
+FlowRouter.route('/figuras',{
+	name: 'figuras',
+	action(){
+		BlazeLayout.render('MainLayout', {main: 'Figuras'});
+	}
+});
+//----------------

@@ -1,13 +1,13 @@
-FigurasForm =new Meteor.Collection('FigurasForm');
+FigurasForm =new Meteor.Collection('figuras_form');
 
 FigurasForm.allow({
-	insert: function(figurasId, doc){
-		return figurasId;
+	insert: function(figuraId, doc){
+		return figuraId;
 	},
-	update: function(figurasId, doc, fields, modifier){
-		return figurasId;
+	update: function(figuraId, doc, fields, modifier){
+		return figuraId;
 	},
-	remove: function(figurasId, doc){
-		return figurasId;
+	remove: function(figuraId, doc){
+		return figuraId;
 	}
-})
+});

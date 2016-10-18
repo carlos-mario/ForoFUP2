@@ -19,5 +19,15 @@ Meteor.methods({
 	'Fields.remove': function (params) {
         VehiculosForm.remove(params);
     },
+    //figuras
+        'FigurasForm.insert': function(params){
+		return FigurasForm.insert(params);
+	},
+	'FigurasForm.update': function(params){
+		return FigurasForm.update({_id: params.id}, params.params);
+	},
+	'Fields.remove': function(params){
+		 FigurasForm.remove(params);
+	},
     //------------
 });

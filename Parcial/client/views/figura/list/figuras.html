@@ -1,0 +1,47 @@
+<Template name="Figuras">
+    <h4>Figuras</h4>
+    <div class="figuras-list">
+        <!--<ul>-->
+            <!--{{#each users}}-->
+            <!--<li class="user-name">{{first_name}} {{last_name}} ({{email}})</li>-->
+            <!--{{/each}}-->
+        <!--</ul>-->
+        <div class="card">
+            <div class="card-content">
+                <table class="highlight responsive-table">
+                    <thead>
+                    <tr>
+                        <th data-field="id">Figura</th>
+                        <th data-field="color">Color</th>
+                        <th data-field="ancho">Ancho</th>
+                        <th data-field="alto">Alto</th>
+                        <th data-field="largo">Largo</th>
+                        <th data-field="tamaño">Tamaño</th>
+                        <th data-field="lados">Lados</th>
+                        <th> </th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {{#each figuras}}
+                        <tr>
+                            <td>{{nombre}}</td>
+                            <td>{{color}}</td>
+                            <td>{{ancho}}</td>
+                            <td>{{alto}}</td>
+                            <td>{{largo}}</td>
+                            <td>{{tamaño}}</td>
+                            <td>{{lados}}</td>
+                            <td>
+                                <a href="/figuras/{{_id}}" class="btn-floating red right-align">
+                                    <i class="large material-icons">mode_edit</i>
+                                </a>
+                            </td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</Template>
