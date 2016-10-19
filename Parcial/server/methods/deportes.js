@@ -20,7 +20,7 @@ Meteor.methods({
         VehiculosForm.remove(params);
     },
     //figuras
-        'FigurasForm.insert': function(params){
+    'FigurasForm.insert': function(params){
 		return FigurasForm.insert(params);
 	},
 	'FigurasForm.update': function(params){
@@ -29,5 +29,15 @@ Meteor.methods({
 	'Fields.remove': function(params){
 		 FigurasForm.remove(params);
 	},
-    //------------
+    //------------frutas
+    'FrutasForm.insert': function(params){
+		return FrutasForm.insert(params);
+	},
+	'FrutasForm.update': function(params){
+		return FrutasForm.update({_id: params.id}, params.params);
+	},
+	'Fields.remove': function(params){
+		 FrutasForm.remove(params);
+	},
+	//-----------------------
 });

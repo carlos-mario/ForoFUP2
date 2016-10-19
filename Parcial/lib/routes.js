@@ -33,20 +33,6 @@ FlowRouter.route('/vehiculos',{
     }
 });
 
-FlowRouter.route('/frutas',{
-	name: 'frutas',
-	action(){
-		BlazeLayout.render('MainLayout', {main: 'Frutas'});
-}
-});
-
-FlowRouter.route('/figuras',{
-	name: 'figuras',
-	action(){
-		BlazeLayout.render('MainLayout', {main: 'Figuras'});
-	}
-});
-
 FlowRouter.route('/libro',{
 	name: 'libro',
 	action(){
@@ -107,3 +93,24 @@ FlowRouter.route('/figuras',{
 	}
 });
 //----------------
+FlowRouter.route('/fruta',{
+    name: 'fruta',
+    action() {
+        BlazeLayout.render('MainLayout', {main: 'Fruta'});
+    }
+});
+
+FlowRouter.route('/frutas/:id',{
+    name: 'edit.fruta',
+    action() {
+        BlazeLayout.render('MainLayout', {main: 'EditFruta'});
+    }
+});
+
+FlowRouter.route('/frutas',{
+    name: 'frutas',
+    action(){
+        BlazeLayout.render('MainLayout', {main: 'Frutas'});
+    }
+});
+//----------------------------

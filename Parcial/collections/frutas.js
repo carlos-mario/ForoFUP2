@@ -1,13 +1,13 @@
-FrutasForm =new Meteor.Collection('FrutasForm');
+FrutasForm =new Meteor.Collection('frutas_form');
 
 FrutasForm.allow({
-	insert: function(frutasId, doc){
-		return frutasId;
+	insert: function(frutaId, doc){
+		return frutaId;
 	},
-	update: function(frutasId, doc, fields, modifier){
-		return frutasId;
+	update: function(frutaId, doc, fields, modifier){
+		return frutaId;
 	},
-	remove: function(frutasId, doc){
-		return frutasId;
+	remove: function(frutaId, doc){
+		return frutaId;
 	}
-})
+});
