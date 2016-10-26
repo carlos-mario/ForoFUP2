@@ -21,13 +21,15 @@ Template.Deporte.events({
       var espacio_donde_ejecuta = event.target.espacio_donde_ejecuta.value;
 
       var deporte = {
+        
         nom_de_deporte: nom_de_deporte,
         num_jugadores: num_jugadores,
         color_unifor: color_unifor,
         color_unifor_2: color_unifor_2,
         instrumento: instrumento,
         horario: horario,
-        espacio_donde_ejecuta: espacio_donde_ejecuta    
+        espacio_donde_ejecuta: espacio_donde_ejecuta,
+        createdAt: new Date()        
       }
 
       Meteor.call('DeportesForm.insert', deporte);
@@ -40,5 +42,6 @@ Template.Deporte.events({
       event.target.horario.value = "";
       event.target.espacio_donde_ejecuta.value = "";
       console.log("Deporte: ", deporte);
+      FlowRouter.go('deportes'); 
     }
 });

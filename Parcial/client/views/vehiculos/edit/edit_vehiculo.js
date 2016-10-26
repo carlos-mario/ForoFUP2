@@ -5,6 +5,10 @@ Template.EditVehiculo.onCreated(function () {
     });
 });
 
+Template.EditVehiculo.onRendered(function () {
+    $('.modal-trigger').leanModal();
+});
+
 Template.EditVehiculo.helpers({
     vehiculo: function () {
         var id = FlowRouter.getParam('id');
