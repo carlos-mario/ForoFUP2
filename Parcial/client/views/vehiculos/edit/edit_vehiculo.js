@@ -13,7 +13,7 @@ Template.EditVehiculo.helpers({
 });
 
 Template.EditVehiculo.events({
-    'submit': function (event) {
+    'click .send': function (event) {
         event.preventDefault();
         var marca = event.target.marca.value;
         var modelo = event.target.modelo.value;
@@ -41,6 +41,11 @@ Template.EditVehiculo.events({
 		event.target.color.value = "";
 		event.target.numero_puertas.value = "";
 		event.target.valor.value = "";
+        FlowRouter.go('vehiculos');
+    },
+    'click .delete': function (event) {
+        event.preventDefault();
+        Meteor.call('VehiculosForm.remove', {_id:FlowRouter.getParam('id')});
         FlowRouter.go('vehiculos');
     }
 });

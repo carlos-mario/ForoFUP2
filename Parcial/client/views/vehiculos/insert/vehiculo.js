@@ -24,7 +24,8 @@ Template.Vehiculo.events({
         modelo: modelo,
         color: color,
         numero_puertas: numero_puertas,
-        valor: valor        
+        valor: valor,
+        createdAt: new Date()        
       }
 
       Meteor.call('VehiculosForm.insert', vehiculo);
@@ -34,6 +35,7 @@ Template.Vehiculo.events({
       event.target.color.value = "";
       event.target.numero_puertas.value = "";
 	    event.target.valor.value = "";
-      console.log("Vehiculo: ", vehiculo);          
+      console.log("Vehiculo: ", vehiculo); 
+      FlowRouter.go('vehiculos');         
     }
 });

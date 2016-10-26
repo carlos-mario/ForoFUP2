@@ -7,11 +7,14 @@ Template.Vehiculos.onCreated(function () {
 
 Template.Vehiculos.helpers({
     vehiculos:function () {
-        return VehiculosForm.find().fetch();
+        return VehiculosForm.find({},{sort:{createdAt: -1}}).fetch();
     }
 
 });
 
 Template.Vehiculos.events({
-
+	'click .add-vehicle': function(event){
+		console.log("add vehiculo");
+		FlowRouter.go('vehiculo');
+	}
 });
