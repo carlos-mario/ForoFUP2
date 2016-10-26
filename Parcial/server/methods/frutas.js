@@ -8,5 +8,4 @@ Meteor.methods({
 	'FrutasForm.remove': function(params){
 		 FrutasForm.remove(params);
 	},
-	//-----------------------
 });
