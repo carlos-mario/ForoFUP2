@@ -31,8 +31,23 @@
 					<input id="espacio_donde_ejecuta" type="text" class="validate" value="{{deporte.espacio_donde_ejecuta}}" required>
 					<label for="espacio_donde_ejecuta">Instrumento con el que se juega</label>
 				</div>
-			</div>      
-			<button type="submit" class="btn btn-primary">Enviar</button>
+			</div>
+			<div class="row right-align">
+				<button  class="btn btn-primary">Enviar</button>
+
+			   	<button data-target="modal1" class="btn modal-trigger">Eliminar</button>
+			</div>
+   
 		</form>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>comfirmacion de eliminar {{deporte.nom_de_deporte}}</h4>
+            <p>Esta seguro de eliminar?</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+            <a class="modal-action modal-close btn btn-primary red delete">Yes</a>
+       </div>
     </div>
 </template>

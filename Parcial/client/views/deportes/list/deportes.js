@@ -7,11 +7,15 @@ Template.Deportes.onCreated(function () {
 
 Template.Deportes.helpers({
     deportes:function () {
-        return DeportesForm.find().fetch();
+        return DeportesForm.find({},{sort:{createdAt: -1}}).fetch();
     }
 
 });
 
 Template.Deportes.events({
+	'click .add-sport': function(event){
+		console.log("add deporte");
+		FlowRouter.go('deporte');
+	}
 
 });
