@@ -27,12 +27,13 @@ Template.Figura.events({
             alto: alto,
             largo:largo,
             tamaño:tamaño,
-            lados:lados
+            lados:lados,
+            createdAt: new Date()
         }
 
         Meteor.call('FigurasForm.insert', figura);
 
-         event.target.nombre.value = "";
+        event.target.nombre.value = "";
         event.target.color.value = "";
         event.target.ancho.value = "";
         event.target.alto.value = "";
@@ -40,6 +41,7 @@ Template.Figura.events({
         event.target.tamaño.value = "";
         event.target.lados.value = "";
         console.log("Figura: ", figura);
+        FlowRouter.go('figuras');
     }
 });
 

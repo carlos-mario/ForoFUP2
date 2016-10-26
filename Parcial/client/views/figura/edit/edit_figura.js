@@ -2,6 +2,7 @@ Template.EditFigura.onCreated(function () {
     var self = this;
     self.autorun(function () {
         self.subscribe('figuras_form');
+    
     });
 });
 
@@ -13,7 +14,7 @@ Template.EditFigura.helpers({
 });
 
 Template.EditFigura.events({
-    'submit': function (event) {
+    'click .send': function (event) {
         event.preventDefault();
         var nombre = event.target.nombre.value;
         var color = event.target.color.value;
@@ -33,7 +34,7 @@ Template.EditFigura.events({
                     alto: alto,
                     largo: largo,
                     tamaño: tamaño,
-                    lados:lados
+                    lados:lado
                 }
             }
         }
@@ -48,6 +49,11 @@ Template.EditFigura.events({
         event.target.largo.value = "";
         event.target.tamaño.value = "";
         event.target.lados.value = "";
+        FlowRouter.go('figuras');
+    },
+    'click .delete': function (event) {
+        event.preventDefault();
+        Meteor.call('FigurasForm.remove', {_id:FlowRouter.getParam('id')});
         FlowRouter.go('figuras');
     }
 });
