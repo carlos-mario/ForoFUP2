@@ -8,5 +8,5 @@ Meteor.methods({
 	},
 	'FigurasForm.remove': function(params){
 		 FigurasForm.remove(params);
-	}
+	},
 });

@@ -5,6 +5,11 @@ Template.EditDeporte.onCreated(function () {
     });
 });
 
+
+Template.EditDeporte.onRendered(function () {
+   $('.modal-trigger').leanModal();
+});
+
 Template.EditDeporte.helpers({
     deporte: function () {
         var id = FlowRouter.getParam('id');
@@ -48,5 +53,11 @@ Template.EditDeporte.events({
         event.target.horario.value = "";
         event.target.espacio_donde_ejecuta.value = "";
         FlowRouter.go('deportes');
+    },
+    'click .delete': function (event) {
+        event.preventDefault();
+        Meteor.call('DeportesForm.remove', {_id:FlowRouter.getParam('id')});
+        FlowRouter.go('deportes');
     }
+
 });

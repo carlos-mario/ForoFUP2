@@ -5,6 +5,10 @@ Template.EditVehiculo.onCreated(function () {
     });
 });
 
+Template.EditVehiculo.onRendered(function () {
+    $('.modal-trigger').leanModal();
+});
+
 Template.EditVehiculo.helpers({
     vehiculo: function () {
         var id = FlowRouter.getParam('id');
@@ -13,7 +17,7 @@ Template.EditVehiculo.helpers({
 });
 
 Template.EditVehiculo.events({
-    'click .send': function (event) {
+    'submit': function (event) {
         event.preventDefault();
         var marca = event.target.marca.value;
         var modelo = event.target.modelo.value;

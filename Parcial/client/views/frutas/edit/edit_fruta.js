@@ -5,6 +5,10 @@ Template.EditFruta.onCreated(function () {
     });
 });
 
+Template.EditFruta.onRendered(function () {
+$('.modal-trigger').leanModal();
+});
+
 Template.EditFruta.helpers({
     fruta: function () {
         var id = FlowRouter.getParam('id');
@@ -41,6 +45,11 @@ Template.EditFruta.events({
         event.target.color_fruta.value = "";
         event.target.peso_fruta.value = "";
         event.target.forma_fruta.value = "";
+        FlowRouter.go('frutas');
+    },
+    'click .delete': function (event) {
+        event.preventDefault();
+        Meteor.call('FrutasForm.remove', {_id:FlowRouter.getParam('id')});
         FlowRouter.go('frutas');
     }
 });

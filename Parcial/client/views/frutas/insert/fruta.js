@@ -19,11 +19,13 @@ Template.Fruta.events({
       var forma_fruta = event.target.forma_fruta.value;
       
       var fruta = {
+        
         nom_de_fruta: nom_de_fruta,
         num_frutas: num_frutas,
         color_fruta: color_fruta,
         peso_fruta: peso_fruta,
-        forma_fruta: forma_fruta
+        forma_fruta: forma_fruta,
+        createdAt: new Date()
       }
 
       Meteor.call('FrutasForm.insert', fruta);
@@ -34,5 +36,6 @@ Template.Fruta.events({
       event.target.peso_fruta.value = "";
       event.target.forma_fruta.value = "";
       console.log("Fruta: ", fruta);
+      FlowRouter.go('frutas'); 
     }
 });

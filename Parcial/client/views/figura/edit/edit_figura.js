@@ -1,9 +1,12 @@
 Template.EditFigura.onCreated(function () {
     var self = this;
     self.autorun(function () {
-        self.subscribe('figuras_form');
-    
+        self.subscribe('figuras_form');    
     });
+});
+
+Template.EditFigura.onRendered(function () {
+    $('.modal-trigger').leanModal();
 });
 
 Template.EditFigura.helpers({
@@ -14,7 +17,7 @@ Template.EditFigura.helpers({
 });
 
 Template.EditFigura.events({
-    'click .send': function (event) {
+    'submit': function (event) {
         event.preventDefault();
         var nombre = event.target.nombre.value;
         var color = event.target.color.value;

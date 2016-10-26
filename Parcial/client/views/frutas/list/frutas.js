@@ -7,11 +7,15 @@ Template.Frutas.onCreated(function () {
 
 Template.Frutas.helpers({
     frutas:function () {
-        return FrutasForm.find().fetch();
+        return FrutasForm.find({},{sort:{createdAt: -1}}).fetch();
     }
 
 });
 
 Template.Frutas.events({
-
+	'click .add-fruit': function(event){
+		console.log("add fruta");
+		FlowRouter.go('fruta');
+	}
 });
+
