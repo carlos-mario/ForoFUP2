@@ -17,7 +17,7 @@ Template.EditFruta.helpers({
 });
 
 Template.EditFruta.events({
-    'submit': function (event) {
+    'click .send': function (event) {
         event.preventDefault();
         var nom_de_fruta = event.target.nom_de_fruta.value;
         var num_frutas = event.target.num_frutas.value;
