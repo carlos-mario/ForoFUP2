@@ -1,11 +1,16 @@
-Meteor.subscribe('libros_form');
+Template.Libro.onCreated(function () {
+    var self = this;
+    self.autorun(function () {
+        self.subscribe('libros_form');
+    });
+});
 
 Template.Libro.helpers({
 
 });
 
 Template.Libro.events({
-    'submit' (event){
+    'submit': function (event){
       event.preventDefault();
       var titulo = event.target.titulo.value;
       var autor = event.target.autor.value;
@@ -14,7 +19,13 @@ Template.Libro.events({
       var edicion = event.target.edicion.value;
 
       var libro = {
-        características: titulo + " " + autor + " " + anio_publicacion + " " + editorial + " " + edicion        
+        
+        titulo: titulo,
+        autor: autor,
+        anio_publicacion: anio_publicacion,
+        editorial: editorial,
+        edicion: edicion,
+        createdAt: new Date()        
       }
 
       Meteor.call('LibrosForm.insert', libro);
@@ -25,5 +36,6 @@ Template.Libro.events({
       event.target.editorial.value = "";
       event.target.edicion.value = "";
       console.log("Libro: ", libro);
+      FlowRouter.go('libros');
   }
 });
