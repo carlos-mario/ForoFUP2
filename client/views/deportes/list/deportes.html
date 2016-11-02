@@ -1,0 +1,47 @@
+<Template name="Deportes">
+    <h4>Deportes</h4>
+    <div class="deportes-list">        
+        <div class="card">
+            <div class="card-content">
+                <table class="highlight responsive-table">
+                    <thead>
+                    <tr>
+                        <th data-field="id">nombre del deporte</th>
+                        <th data-field="num_jugadores">Numero de jugadores</th>
+                        <th data-field="color_unifor">Color de uniforme</th>
+						<th data-field="color_unifor_2">color del uniforme contrario</th>
+                        <th data-field="instrumento">Instrumento con el que se juega</th>
+                        <th data-field="horario">horario en el que se juega</th>
+                        <th data-field="espacio_donde_ejecuta">espacio donde se juega</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {{#each deportes}}
+                        <tr>
+                            <td>{{nom_de_deporte}}</td>
+                            <td>{{num_jugadores}}</td>
+                            <td>{{color_unifor}}</td>
+							<td>{{color_unifor_2}}</td>
+							<td>{{instrumento}}</td>
+                            <td>{{horario}}</td>
+                            <td>{{espacio_donde_ejecuta}}</td>
+                            <td>
+                                <a href="/deportes/{{_id}}" class="btn-floating red right-align">
+                                    <i class="large material-icons">mode_edit</i>
+                                </a>
+                            </td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large red add-sport">
+          <i class="large material-icons">Add</i>
+        </a>
+    </div>
+
+</Template>

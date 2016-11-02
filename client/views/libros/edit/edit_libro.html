@@ -1,0 +1,43 @@
+<template name="EditLibro">
+    <div class="row">
+        <h2>Libro</h2>
+        <form class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="titulo" type="text" class="validate" value="{{libro.titulo}}" required>
+					<label for="titulo">Título</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="autor" type="text" class="validate" value="{{libro.autor}}" required>
+					<label for="autor">Autor</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="anio_publicacion" type="text" class="validate" value="{{libro.anio_publicacion}}" required>
+					<label for="anio_publicacion">Año de publicación</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="editorial" type="text" class="validate" value="{{libro.editorial}}" required>
+					<label for="editorial">Editorial</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="edicion" type="text" class="validate" value="{{libro.edicion}}" required>
+					<label for="edicion">Edición</label>
+				</div>
+			</div>			
+			<div class="row right-align">
+				<button class="btn btn-primary">Enviar</button>
+				<button data-target="modal1" class="btn modal-trigger">Eliminar</button>
+			</div>
+		</form>
+	</div>
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>comfirmacion de eliminar {{libro.titulo}} </h4>
+			<p>Esta seguro de eliminar?</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+			<a class="modal-action modal-close btn btn-primary red delete">Yes</a>
+		</div>
+	</div>      						
+</template>

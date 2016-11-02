@@ -1,0 +1,43 @@
+<template name="EditVehiculo">
+    <div class="row">
+        <h2>Vehiculo</h2>
+        <form class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="marca" type="text" class="validate" value="{{vehiculo.marca}}" required>
+					<label for="marca">Marca</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="modelo" type="text" class="validate" value="{{vehiculo.modelo}}" required>
+					<label for="modelo">Modelo</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="color" type="text" class="validate" value="{{vehiculo.color}}" required>
+					<label for="color">Color</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="numero_puertas" type="text" class="validate" value="{{vehiculo.numero_puertas}}" required>
+					<label for="numero_puertas">Número de puertas</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="valor" type="text" class="validate" value="{{vehiculo.valor}}" required>
+					<label for="valor">Valor</label>
+				</div>
+			</div>			
+			<div class="row right-align">
+				<button class="btn btn-primary">Enviar</button>
+				<button data-target="modal1" class="btn modal-trigger">Eliminar</button>
+			</div>
+		</form>
+	</div>
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>Comfirme su eliminación</h4>
+			<p>Esta seguro de eliminar a {{vehiculo.marca}}?</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+			<a class="modal-action modal-close btn btn-primary red delete">Yes</a>
+		</div>
+	</div>      						
+</template>

@@ -1,0 +1,51 @@
+<template name="EditDeporte">
+    <div class="row">
+        <h2>Deporte</h2>
+        <form class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="nom_de_deporte" type="text" class="validate" value="{{deporte.nom_de_deporte}}" required>
+					<label for="nom_de_deporte">Nombre del deporte</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="num_jugadores" type="text" class="validate" value="{{deporte.num_jugadores}}" required>
+					<label for="num_jugadores">Numero de jugadores</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="color_unifor" type="text" class="validate" value="{{deporte.color_unifor}}" required>
+					<label for="color_unifor">Color de uniforme</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="color_unifor_2" type="text" class="validate" value="{{deporte.color_unifor_2}}" required>
+					<label for="color_unifor_2">Color de uniforme del oponente</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="instrumento" type="text" class="validate" value="{{deporte.instrumento}}" required>
+					<label for="instrumento">Instrumento del deporte</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="horario" type="text" class="validate" value="{{deporte.horario}}" required>
+					<label for="horario">Horario en el que se juega</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="espacio_donde_ejecuta" type="text" class="validate" value="{{deporte.espacio_donde_ejecuta}}" required>
+					<label for="espacio_donde_ejecuta">Instrumento con el que se juega</label>
+				</div>
+			</div>
+			<div class="row right-align">
+				<button  class="btn btn-primary">Enviar</button>
+			   	<button data-target="modal1" class="btn modal-trigger">Eliminar</button>
+			</div>			  
+		</form>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>comfirmacion de eliminar {{deporte.nom_de_deporte}}</h4>
+            <p>Esta seguro de eliminar?</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+            <a class="modal-action modal-close btn btn-primary red delete">Yes</a>
+       </div>
+    </div>
+</template>
