@@ -25,7 +25,7 @@ Template.Vehiculo.events({
         color: color,
         numero_puertas: numero_puertas,
         valor: valor,
-        createdAt: new Date()        
+        createdAt: new Date()         
       }
 
       Meteor.call('VehiculosForm.insert', vehiculo);
