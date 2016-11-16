@@ -1,0 +1,36 @@
+<template name="EditForo">
+    <div class="row">
+        <h2>Foro</h2>
+        <form class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="titulo_foro" type="text" class="validate" value="{{foro.titulo_foro}}" required>
+					<label for="titulo_foro">Titulo del foro</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="descripcion" type="text" class="validate" value="{{foro.descripcion}}" required>
+					<label for="descripcion">Descricon</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="fecha_creacion_foro" type="text" class="validate" value="{{foro.fecha_creacion_foro}}" required>
+					<label for="fecha_creacion_foro">Fecha</label>
+				</div>
+				</div>
+			<div class="row right-align">
+				<button  class="btn btn-primary">Enviar</button>
+			   	<button data-target="modal1" class="btn modal-trigger">Eliminar</button>
+			</div>   
+
+		</form>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>comfirmacion de eliminar {{foro.titulo_foro}}</h4>
+            <p>Esta seguro de eliminar?</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+            <a class="modal-action modal-close btn btn-primary red delete">Yes</a>
+       </div>
+    </div>
+</template>
