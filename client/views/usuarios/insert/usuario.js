@@ -4,6 +4,7 @@ Template.Usuario.onCreated(function () {
         self.subscribe('usuarios_form');
     });
 });
+//this.counter = new ReactiveVar(0);
 
 Template.Usuario.helpers({
 
@@ -39,3 +40,16 @@ Template.Usuario.events({
       FlowRouter.go('usuarios');         
     }
 });
+
+//Template.usuarios.helpers({
+//counter(){
+//  return Template.instance().counter.get();
+//},
+
+//});
+//Template.usuarios.events({
+
+//'click #likes'(event, instance){
+//instance.counter.set(instance.counter.get() + 1);
+//}
+//});
