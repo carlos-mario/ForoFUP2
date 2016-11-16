@@ -1,0 +1,40 @@
+<Template name="Temas">
+    <h4>Categoria</h4>
+    <div class="temas-list">        
+        <div class="card">
+            <div class="card-content">
+                <table class="highlight responsive-table">
+                    <thead>
+                    <tr>
+                        <th data-field="id_tema">Id Categoria</th>
+                        <th data-field="titulo_tema">Titulo Categoria</th>
+                        
+                        <th> </th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {{#each temas}}
+                        <tr>
+                            <td>{{id_tema}}</td>
+                            <td>{{titulo_tema}}</td>
+                            <td>
+                                <a href="/temas/{{_id}}" class="btn-floating red right-align">
+                                    <i class="large material-icons">mode_edit</i>
+                                </a>
+                            </td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large red add-theme">
+          <i class="large material-icons">add</i>
+        </a>
+    </div>
+        
+</Template>
