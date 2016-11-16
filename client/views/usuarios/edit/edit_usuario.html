@@ -1,0 +1,43 @@
+<template name="EditUsuario">
+    <div class="row">
+        <h2>Usuarios</h2>
+        <form class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="id_usuario" type="text" class="validate" value="{{usuario.id_usuario}}" required>
+					<label for="id_usuario">Id usuario</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="nombres" type="text" class="validate" value="{{usuario.nombres}}" required>
+					<label for="nombres">Nombres</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="apellidos" type="text" class="validate" value="{{usuario.apellidos}}" required>
+					<label for="apellidos">Apellidos</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="correo" type="email" class="validate" value="{{usuario.correo}}" required>
+					<label for="correo">Correo electronico</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="contraseña" type="password" class="validate" value="{{usuario.contraseña}}" required>
+					<label for="contraseña">Contraseña</label>
+				</div>
+			</div>			
+			<div class="row right-align">
+				<button class="btn btn-primary">Enviar</button>
+				<button data-target="modal1" class="btn modal-trigger">Eliminar</button>
+			</div>
+		</form>
+	</div>
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>Comfirme su eliminación</h4>
+			<p>Esta seguro de eliminar a {{usuario.id_usuario}}?</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="modal-action modal-close waves-effect waves-red btn-flat">Cancelar</a>
+			<a class="modal-action modal-close btn btn-primary red delete">Si</a>
+		</div>
+	</div>      						
+</template>

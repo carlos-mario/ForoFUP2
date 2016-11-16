@@ -1,0 +1,45 @@
+<Template name="Usuarios">
+    <h4>Usuarios</h4>
+    <div class="usuarios-list">        
+        <div class="card">
+            <div class="card-content">
+                <table class="highlight responsive-table">
+                    <thead>
+                    <tr>
+                        <th data-field="id">Id usuario</th>
+                        <th data-field="nombres">Nombres</th>
+                        <th data-field="apellidos">Apellidos</th>
+						<th data-field="correo">Correo</th>
+                        <th data-field="contraseña">Contraseña</th>
+                        <th> </th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {{#each usuarios}}
+                        <tr>
+                            <td>{{id_usuario}}</td>
+                            <td>{{nombres}}</td>
+                            <td>{{color}}</td>
+							<td>{{numero_puertas}}</td>
+							<td>{{contraseña}}</td>
+                            <td>
+                                <a href="/usuarios/{{_id}}" class="btn-floating red right-align">
+                                    <i class="large material-icons">mode_edit</i>
+                                </a>
+                            </td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large red add-vehicle">
+          <i class="large material-icons">add</i>
+        </a>
+    </div>
+        
+</Template>
