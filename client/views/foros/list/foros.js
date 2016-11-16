@@ -14,7 +14,7 @@ Template.Foros.helpers({
 });
 
 Template.Foros.events({
-	'click .add-sport': function(event){
+	'click .add-forum': function(event){
 		console.log("add foro");
 		FlowRouter.go('foro');
 	}
