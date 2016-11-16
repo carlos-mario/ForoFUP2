@@ -1,0 +1,36 @@
+<template name="EditRespuesta">
+    <div class="row">
+        <h2>Respuesta</h2>
+        <form class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="id_respuesta" type="text" class="validate" value="{{respuesta.id_respuesta}}" required>
+					<label for="id_respuesta">Id</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="contenido_respuesta" type="text" class="validate" value="{{respuesta.contenido_respuesta}}" required>
+					<label for="contenido_respuesta">Contenido</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="fecha_respuesta" type="text" class="validate" value="{{respuesta.fecha_respuesta}}" required>
+					<label for="fecha_respuesta">Creacion</label>
+				</div>
+				
+			</div>			
+			<div class="row right-align">
+				<button class="btn btn-primary">Enviar</button>
+				<button data-target="modal1" class="btn modal-trigger">Eliminar</button>
+			</div>
+		</form>
+	</div>
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>Comfirme su eliminación</h4>
+			<p>Esta seguro de eliminar a {{respuesta.contenido_respuesta}}?</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+			<a class="modal-action modal-close btn btn-primary red delete">Yes</a>
+		</div>
+	</div>      						
+</template>
