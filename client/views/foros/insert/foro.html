@@ -1,12 +1,17 @@
 
 <template name="Foro">
-
-
-
    <div class="row">
-   <h2>Foro</h2>
+   <h2> _________________________________</h2>
     <form class="col s12">
       <div class="row">
+        <div>
+        <select class="browser-default">
+          <option value="" disabled selected>Selecciona una categoria</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+         </select>
+        </div>
         <div class="input-field col s12">
           <input id="titulo_foro" type="text" class="validate" required>
           <label for="titulo_foro">Titulo del foro</label>
@@ -21,35 +26,6 @@
         </div>
         </div>      
       <button type="submit" class="btn red">Enviar</button>
-
-
-
-<header>
-
-  <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
-
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-  </ul>
-        
-
-</header>
-
-
-
-
     </form>
   </div>
-
-
-
-
-
-
-
 </template>
-

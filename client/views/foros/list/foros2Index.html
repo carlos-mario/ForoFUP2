@@ -1,0 +1,28 @@
+<Template name="ForosIndex">
+    <h4>Foros</h4>
+    <div class="foros-list">        
+        <div class="card">
+            <div class="card-content">
+                <table class="highlight responsive-table">
+                    <thead>
+                    <tr>
+                        <th data-field="id">Titulo del foro</th> 
+                        <th data-field="descripcion">Categoria</th>                       
+                        <th data-field="fecha_creacion_foro">Fecha</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {{#each foros}}
+                        <tr>
+                            <td>{{titulo_foro}}</td>
+                            <td>{{descripcion}}</td>
+                            <td>{{fecha_creacion_foro}}</td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</Template>
