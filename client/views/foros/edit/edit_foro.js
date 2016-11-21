@@ -5,7 +5,6 @@ Template.EditForo.onCreated(function () {
     });
 });
 
-
 Template.EditForo.onRendered(function () {
    $('.modal-trigger').leanModal();
 });
@@ -35,7 +34,7 @@ Template.EditForo.events({
             }
         }
 
-        Meteor.call('ForoForm.update', foro_updated);
+        Meteor.call('ForosForm.update', foro_updated);
 
         event.target.titulo_foro.value = "";
 		event.target.descripcion.value = "";
