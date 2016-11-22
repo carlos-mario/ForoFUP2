@@ -21,6 +21,7 @@ Template.EditUsuario.events({
         event.preventDefault();
         var id_usuario = event.target.id_usuario.value;
         var nombres = event.target.nombres.value;
+        var nickname = event.target.nickname.value;
         var apellidos = event.target.apellidos.value;
         var correo = event.target.correo.value;
 		var contraseña = event.target.contraseña.value;
@@ -31,6 +32,7 @@ Template.EditUsuario.events({
                 $set: {
 					id_usuario: id_usuario, 
 					nombres: nombres,
+                    nickname:nickname,
 					apellidos: apellidos,
 					correo: correo,
 					contraseña: contraseña
@@ -42,6 +44,7 @@ Template.EditUsuario.events({
 
         event.target.id_usuario.value = "";
 		event.target.nombres.value = "";
+        event.target.nickname.value = "";
 		event.target.apellidos.value = "";
 		event.target.correo.value = "";
 		event.target.contraseña.value = "";
