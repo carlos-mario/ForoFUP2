@@ -1,4 +1,5 @@
 <Template name="Respuestas">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <h4>Respuestas</h4>
     <div class="respuestas-list">        
         <div class="card">
@@ -6,7 +7,7 @@
                 <table class="highlight responsive-table">
                     <thead>
                     <tr>
-                        <th data-field="id_respuesta">id</th>
+                        <!-- <th data-field="id_respuesta">id</th> -->
                         <th data-field="contenido_respuesta"> contenido</th>
                         <th data-field="fecha_respuesta">fecha</th>						
                     </tr>
@@ -15,9 +16,9 @@
                     <tbody>
                     {{#each respuestas}}
                         <tr>
-                            <td>{{id_respuesta}}</td>
+                            <!-- <td>{{id_respuesta}}</td> -->
                             <td>{{contenido_respuesta}}</td>
-                            <td>{{fecha_respuesta}}</td>							
+                            <td>{{createdAt}}  </td>							
                             <td>
                                 <a href="/respuestas/{{_id}}" class="btn-floating red right-align">
                                     <i class="large material-icons">mode_edit</i>

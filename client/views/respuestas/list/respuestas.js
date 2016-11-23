@@ -8,6 +8,10 @@ Template.Respuestas.onCreated(function () {
 Template.Respuestas.helpers({
     respuestas:function () {
         return RespuestasForm.find({},{sort:{createdAt: -1}}).fetch();
+    },
+    createdAt: function(){
+        console.log("createdAt: ", this);
+        return this.createdAt;
     }
 
 });
