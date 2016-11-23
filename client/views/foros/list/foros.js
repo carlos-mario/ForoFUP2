@@ -1,4 +1,3 @@
-
 Template.Foros.onCreated(function () {
     var self = this;
     self.autorun(function () {
