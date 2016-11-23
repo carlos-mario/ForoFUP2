@@ -9,7 +9,12 @@ Template.Foros.onCreated(function () {
 Template.Foros.helpers({
     foros:function () {
         return ForosForm.find({},{sort:{createdAt: -1}}).fetch();
+    },
+    createdAt: function(){
+        console.log("createdAt: ", this);
+        return this.createdAt;
     }
+
 
 });
 
