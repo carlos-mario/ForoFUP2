@@ -14,8 +14,6 @@ Template.Foros.helpers({
         console.log("createdAt: ", this);
         return this.createdAt;
     }
-
-
 });
 
 Template.Foros.events({
@@ -26,6 +24,5 @@ Template.Foros.events({
     'change select': function(event){
         Session.set('categori_filter', event.value);
     }
-
 });
 
