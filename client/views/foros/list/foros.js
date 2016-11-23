@@ -9,8 +9,11 @@ Template.Foros.onCreated(function () {
 Template.Foros.helpers({
     foros:function () {
         return ForosForm.find({},{sort:{createdAt: -1}}).fetch();
+    },
+    createdAt: function(){
+        console.log("createdAt: ", this);
+        return this.createdAt;
     }
-
 });
 
 Template.Foros.events({
@@ -18,6 +21,5 @@ Template.Foros.events({
 		console.log("add foro");
 		FlowRouter.go('foro');
 	}
-
 });
 

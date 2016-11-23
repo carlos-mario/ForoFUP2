@@ -3,6 +3,14 @@
      <h2> _________________________________</h2>
      <form class="col s12">
       <div class="row">
+        <div>
+        <select class="browser-default">
+          <option value="" disabled selected>Selecciona una categoria</option>
+          {{#each categories}}
+            <option value={{_id}}>{{titulo_tema}}</option>
+          {{/each}}
+         </select>
+        </div>
         <div class="input-field col s12">
           <input id="titulo_foro" type="text" class="validate" required>
           <label for="titulo_foro">Titulo del foro</label>
@@ -11,11 +19,13 @@
           <input id="descripcion" type="text" class="validate" required>
           <label for="descripcion">Descripcion</label>
         </div>
-        <div class="input-field col s12">
+        <!-- <div class="input-field col s12">
           <input id="fecha_creacion_foro" type="text" class="validate" required>
           <label for="fecha_creacion_foro">Fecha</label>
         </div>
       </div>      
+        </div> -->
+        </div>      
       <button type="submit" class="btn red">Enviar</button>
     </form>
   </div>

@@ -16,6 +16,8 @@ Template.ForosIndex.events({
 	'click .add-forum': function(event){
 		console.log("add foro");
 		FlowRouter.go('foro');
-	}
-
+	},
+    'click .foro_info': function(event){
+        console.log("click_foro", event);
+    }   
 });
