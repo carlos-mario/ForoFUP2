@@ -25,3 +25,4 @@ Template.Foros.events({
 	}
 
 });
+
