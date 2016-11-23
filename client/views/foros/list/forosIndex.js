@@ -9,7 +9,6 @@ Template.ForosIndex.helpers({
     foros:function () {
         return ForosForm.find({},{sort:{createdAt: -1}}).fetch();
     }
-
 });
 
 Template.ForosIndex.events({
@@ -19,6 +18,6 @@ Template.ForosIndex.events({
 	},
     'click .foro_info': function(event){
         console.log("click_foro", event);
-        FlowRouter.go('foros');
+        FlowRouter.go('ForosRes');
     }   
 });
