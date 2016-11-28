@@ -19,26 +19,26 @@ Template.EditForo.helpers({
 Template.EditForo.events({
     'submit': function (event) {
         event.preventDefault();
-        var titulo_foro = event.target.titulo_foro.value;
+        // var titulo_foro = event.target.titulo_foro.value;
         var descripcion = event.target.descripcion.value;
-        var fecha_creacion_foro = event.target.fecha_creacion_foro.value;
+        // var fecha_creacion_foro = event.target.fecha_creacion_foro.value;
         	
         var foro_updated = {
             id: FlowRouter.getParam('id'),
             params: {
                 $set: {
-					  titulo_foro: titulo_foro,
+					  // titulo_foro: titulo_foro,
                       descripcion: descripcion,
-                      fecha_creacion_foro: fecha_creacion_foro,
+                      // fecha_creacion_foro: fecha_creacion_foro,
                 }
             }
         }
 
         Meteor.call('ForosForm.update', foro_updated);
 
-        event.target.titulo_foro.value = "";
+        // event.target.titulo_foro.value = "";
 		event.target.descripcion.value = "";
-		event.target.fecha_creacion_foro.value = "";
+		// event.target.fecha_creacion_foro.value = "";
         FlowRouter.go('foros');
     },
     'click .delete': function (event) {
