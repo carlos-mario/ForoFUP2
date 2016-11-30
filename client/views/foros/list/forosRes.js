@@ -7,13 +7,16 @@ Template.ForosRes.onCreated(function () {
 
 Template.ForosRes.helpers({
     foros:function () {
-        return ForosForm.find({},{sort:{createdAt: -1}}).fetch();
+        current_foro_id = Session.get('current_foro_id');
+        return [ForosForm.findOne({_id: current_foro_id})];
     }
 });
 
 Template.ForosRes.events({
 	'click .add-forum': function(event){
-		console.log("add foro");
+		console.log("add foro", event.currentTarget.id);
 		FlowRouter.go('ForosRes');
 	},  
 });
+
+

@@ -3,18 +3,22 @@
         <form class="col s12">
 			<div class="row">
 				<div class="input-field col s12">
-					<input id="titulo_foro" type="text" class="validate" value="{{foro.titulo_foro}}" required>
-					<label for="titulo_foro"></label>
+				<h3 class="title">Foros</h3>
+					{{#each foros}}
 					<div class="input-field col s12">
-						<input id="descripcion" type="text" class="validate" value="{{foro.descripcion}}" required>
-						<label for="descripcion"></label>
+						<input disabled value="" id="titulo_foro" type="text" >
+						<label for="disabled">{{titulo_foro}}</label>
 					</div>
-				</div>				
+					<div class="input-field col s12">
+						<input disabled value="" id="descripcion" type="text">
+						<label for="disabled">{{descripcion}}</label>							
+					</div>
+					{{/each}}
+				</div>
 			</div>
 			<div class="row right-align">
 				<button  class="btn btn-primary">Enviar</button>			   	
-			</div>   
-
+			</div> 
 		</form>
     </div>
 </template>
