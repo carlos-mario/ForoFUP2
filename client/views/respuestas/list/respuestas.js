@@ -26,7 +26,7 @@ Template.Respuestas.events({
     'click .like': function(event){
         event.preventDefault();
         
-        var current_user_id = '1234568';
+        var current_user_id = '12345683';
         var current_event_id = event.currentTarget.id;
         params = {  id: current_event_id, 
                     params: {   $inc: { likes: 1 } ,  
