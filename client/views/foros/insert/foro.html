@@ -4,12 +4,12 @@
      <form class="col s12">
       <div class="row">
         <div>
-        <select class="browser-default">
-          <option value="" disabled selected>Selecciona una categoria</option>
-          {{#each categories}}
-            <option value={{_id}}>{{titulo_tema}}</option>
-          {{/each}}
-         </select>
+          <select id="categories-select" class="browser-default" name="categori">
+            <option value="" disabled selected>Selecciona una categoria</option>
+            {{#each categories}}
+              <option value={{_id}}>{{titulo_tema}}</option>
+            {{/each}}
+           </select>
         </div>
         <div class="input-field col s12">
           <input id="titulo_foro" type="text" class="validate" required>

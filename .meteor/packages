@@ -25,9 +25,13 @@ kadira:flow-router
 kadira:blaze-layout
 
 meteortoys:allthings
+<<<<<<< HEAD
 session
 #accounts-ui
 #twbs:bootstrap
 #underscore
 #ian:accounts-ui-bootstrap-3
 #accounts-base
+=======
+momentjs:moment
+>>>>>>> 3effd23945779c7c96c0b26da0b555896739fa52

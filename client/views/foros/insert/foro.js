@@ -34,12 +34,14 @@ Template.Foro.events({
       var titulo_foro = event.target.titulo_foro.value;
       var descripcion = event.target.descripcion.value;
       //var fecha_creacion_foro = event.target.fecha_creacion_foro.value;
-      
+      console.log('id select: ', $( "#categories-select option:selected" ).val());
+
       var foro = {
         
         titulo_foro: titulo_foro,
         descripcion: descripcion,
-        //fecha_creacion_foro: fecha_creacion_foro,
+        //trae las categorias del select
+        categoria: $( "#categories-select option:selected" ).val(),      
         createdAt: new Date()        
       }
 
