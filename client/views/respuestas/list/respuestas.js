@@ -12,7 +12,12 @@ Template.Respuestas.helpers({
     createdAt: function(){
         console.log("createdAt: ", this);
         return this.createdAt;
+    },
+        createdAt: function(){
+        console.log("createdAt: ", moment(this.createdAt).format('lll'));
+         return moment(this.createdAt).format('lll');
     }
+
 
 });
 
@@ -26,7 +31,7 @@ Template.Respuestas.events({
     'click .like': function(event){
         event.preventDefault();
         
-        var current_user_id = '1234568';
+        var current_user_id = '12345683';
         var current_event_id = event.currentTarget.id;
         params = {  id: current_event_id, 
                     params: {   $inc: { likes: 1 } ,  

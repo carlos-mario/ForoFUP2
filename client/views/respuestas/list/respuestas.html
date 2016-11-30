@@ -4,6 +4,7 @@
     <div class="respuestas-list">        
         <div class="card">
             <div class="card-content">
+            <div class="row">
                 <table class="highlight responsive-table">
                     <thead>
                     <tr>
@@ -17,30 +18,31 @@
                     {{#each respuestas}}
                         <tr>
                             <!-- <td>{{id_respuesta}}</td> -->
-                            <td>{{contenido_respuesta}}</td>
-                            <td>{{createdAt}}  </td>							
-                            <td>
+                            <td>{{contenido_respuesta}}
+                            <td>                           
                                 <a href="/respuestas/{{_id}}" class="btn-floating red right-align">
                                     <i class="large material-icons">mode_edit</i>
                                 </a>
                                 <a id="{{_id}}" class="btn-floating blue right-align like">
                                     <i class="large material-icons" onclick="Materialize.toast('LIKE', 4000, 'rounded')">thumb_up                            
                                     </i>    
-                                </a>
+                                </a>    
+                                <button class="widget-button like-count highlight-action" aria-label="2 people liked this post" title="2 people liked this post">{{likes}} Likes</button>
                             </td>
-                            <div class="row">
-                            <div class="col s1">{{likes}}</div>                                        
-                             </div>
+                            </td>
+                            <td>{{createdAt}}  </td>							
+                            
                         </tr>
                     {{/each}}
                     </tbody>
                 </table>
             </div>
+            </div>
         </div>
     </div>
     <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
         <a class="btn-floating btn-large red add-rta">
-          <i class="large material-icons">Add</i>
+          <i class="large material-icons">add</i>
         </a>
     </div>
 
