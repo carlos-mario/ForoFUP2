@@ -12,7 +12,12 @@ Template.Respuestas.helpers({
     createdAt: function(){
         console.log("createdAt: ", this);
         return this.createdAt;
+    },
+        createdAt: function(){
+        console.log("createdAt: ", moment(this.createdAt).format('lll'));
+         return moment(this.createdAt).format('lll');
     }
+
 
 });
 
