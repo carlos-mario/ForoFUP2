@@ -1,39 +1,33 @@
 <Template name="Respuestas">
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <h4>Respuestas</h4>
     <div class="respuestas-list">        
         <div class="card">
             <div class="card-content">
-                <table class="highlight responsive-table">
-                    <thead>
-                    <tr>
-                        <!-- <th data-field="id_respuesta">id</th> -->
-                        <th data-field="contenido_respuesta"> contenido</th>
-                        <th data-field="fecha_respuesta">fecha</th>						
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    {{#each respuestas}}
-                        <tr>
-                            <!-- <td>{{id_respuesta}}</td> -->
-                            <td>{{contenido_respuesta}}</td>
-                            <td>{{createdAt}}  </td>							
-                            <td>
-                                <a href="/respuestas/{{_id}}" class="btn-floating red right-align">
-                                    <i class="large material-icons">mode_edit</i>
-                                </a>
-                                <a id="{{_id}}" class="btn-floating blue right-align like">
-                                    <i class="large material-icons" onclick="Materialize.toast('LIKE', 4000, 'rounded')">thumb_up                            
-                                    </i>    
-                                </a>
-                                <button class="widget-button like-count highlight-action" aria-label="2 people liked this post" title="2 people liked this post">{{likes}} Likes</button>
-                            </td>
-                            
-                        </tr>
-                    {{/each}}
-                    </tbody>
-                </table>
+                <div class="row">
+                    <table class="highlight responsive-table">       
+                        <tbody>
+                            {{#each respuestas}}
+                                <tr>
+                                    <!-- <td>{{id_respuesta}}</td> -->
+                                    <td>{{contenido_respuesta}}
+                                        <td>                           
+                                            <a href="/respuestas/{{_id}}" class="btn-floating red right-align">
+                                                <i class="large material-icons">mode_edit</i>
+                                            </a>
+                                            <a id="{{_id}}" class="btn-floating blue right-align like">
+                                                <i class="large material-icons" onclick="Materialize.toast('LIKE', 4000, 'rounded')">thumb_up                            
+                                                </i>    
+                                            </a>    
+                                            <button class="widget-button like-count highlight-action" aria-label="2 people liked this post" title="2 people liked this post">{{likes}} Likes</button>
+                                            <td>{{createdAt}}  </td>
+                                        </td>
+                                    </td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                 </div>            
             </div>
         </div>
     </div>
@@ -42,5 +36,4 @@
           <i class="large material-icons">add</i>
         </a>
     </div>
-
 </Template>
