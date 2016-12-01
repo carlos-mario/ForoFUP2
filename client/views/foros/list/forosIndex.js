@@ -4,10 +4,16 @@ Template.ForosIndex.onCreated(function () {
         self.subscribe('foros_form');
         //nos subscribimos para poder buscar en el foro
         self.subscribe('temas_form');
+        self.subscribe('allUsers');
     });
 });
 
 Template.ForosIndex.helpers({
+    owner: function(){
+        console.log("user: ", this.owner, Meteor.users.find({_id: this.owner}).fetch()[0].emails[0].address);
+        var owner = Meteor.users.find({_id: this.owner}).fetch()[0];
+        return owner.emails[0].address;
+    },
     foros:function () {
         //cambio en find para buscar por categoria quemando el parametro
         console.log("recuperar foros: ", ForosForm.find({"categoria" : Session.get("categori_filter")},{sort:{createdAt: -1}}).fetch());

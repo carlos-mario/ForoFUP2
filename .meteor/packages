@@ -35,4 +35,10 @@ session
 #accounts-base
 momentjs:moment
 
+<<<<<<< HEAD
 u2622:persistent-session
+=======
+accounts-ui
+npm-bcrypt
+accounts-password
+>>>>>>> 98b66860d8dc35a872b31def946f38a3fe40145e

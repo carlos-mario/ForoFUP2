@@ -5,7 +5,7 @@
 
         <div class="">
           <select id="categories-select" class="browser-default" name="categori">
-            <option value="" disabled selected>Buscar por categoria</option>
+            <option value="" disabled selected>Buscar por categoria {{user}}</option>
             {{#each categories}}
               <option value={{_id}}>{{titulo_tema}}</option>
             {{/each}}
@@ -17,7 +17,8 @@
                     <thead>
                     <tr>
                         <th data-field="id">Titulo del foro</th> 
-                        <th data-field="descripcion">Categoria</th>                       
+                        <th data-field="descripcion">Categoria</th>  
+                        <th data-field="descripcion">Creador</th>                       
                         <th data-field="fecha_creacion_foro">Fecha</th>
                     </tr>
                     </thead>
@@ -27,6 +28,7 @@
                         <tr class="foro_info" id="{{_id}}">
                             <td>{{titulo_foro}}</td>
                             <td>{{categoria}}</td>
+                            <td>{{owner}}</td>
                             <td>{{createdAt}}</td>
                         </tr>
                     {{/each}}
