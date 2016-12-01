@@ -35,3 +35,6 @@ session
 #accounts-base
 momentjs:moment
 
+accounts-ui
+npm-bcrypt
+accounts-password
