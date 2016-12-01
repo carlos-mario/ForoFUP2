@@ -7,6 +7,11 @@ Template.ForosRes.onCreated(function () {
 });
 
 Template.ForosRes.helpers({
+    owner: function(){
+        console.log("user: ", this.owner, Meteor.users.find({_id: this.owner}).fetch()[0].emails[0].address);
+        var owner = Meteor.users.find({_id: this.owner}).fetch()[0];
+        return owner.emails[0].address;
+    },
     foros:function () {
         current_foro_id = Session.get('current_foro_id');
         return [ForosForm.findOne({_id: current_foro_id})];

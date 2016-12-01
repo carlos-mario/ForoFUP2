@@ -7,7 +7,7 @@ Template.Foros.onCreated(function () {
 
 Template.Foros.helpers({
     foros:function () {
-        return ForosForm.find({categori: Session.get('categori_filter')},{sort:{createdAt: -1}}).fetch();
+        return ForosForm.find({},{sort:{createdAt: -1}}).fetch();
     },
     createdAt: function(){
         console.log("createdAt: ", moment(this.createdAt).format('lll'));

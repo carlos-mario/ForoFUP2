@@ -58,7 +58,7 @@ Template.ForosIndex.events({
     'click .foro_info': function(event){
         console.log("add foro", event.currentTarget.id);
         var current_event_foro_id = event.currentTarget.id;
-        Session.set('current_foro_id', current_event_foro_id);
+        Session.setPersistent('current_foro_id', current_event_foro_id);
         FlowRouter.go('ForosRes');
     },
     'change select': function(event){

@@ -2,6 +2,7 @@ Template.Respuestas.onCreated(function () {
     var self = this;
     self.autorun(function () {
         self.subscribe('respuestas_form');
+        self.subscribe('allUsers');
     });
 });
 
@@ -17,8 +18,6 @@ Template.Respuestas.helpers({
         console.log("createdAt: ", moment(this.createdAt).format('lll'));
          return moment(this.createdAt).format('lll');
     }
-
-
 });
 
 Template.Respuestas.events({
@@ -34,7 +33,7 @@ Template.Respuestas.events({
         var current_user_id = '123456813';
         var current_event_id = event.currentTarget.id;
         params = {  id: current_event_id, 
-                    params: {   $inc: { likes: 1 } ,  
+                    params: {   $inc: { likes: 1 },  
                                 $push: { likers:  current_user_id } }
                  };
 
@@ -42,11 +41,6 @@ Template.Respuestas.events({
         var q = _.find(res, (x) => x == current_user_id );
         console.log('like', res, q); 
         if ( q == current_user_id ) return;        
-        Meteor.call('RespuestasForm.update', params);
-
-
-
-        
+        Meteor.call('RespuestasForm.update', params);        
     }
-
 });

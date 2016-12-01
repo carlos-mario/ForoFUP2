@@ -4,7 +4,7 @@
      <form class="col s12">
       <div class="row">
         <div>
-          <select id="categories-select" class="browser-default" name="categori">
+          <select id="categories-select" class="browser-default" name="categori" required>
             <option value="" disabled selected>Selecciona una categoria</option>
             {{#each categories}}
               <option value={{_id}}>{{titulo_tema}}</option>
