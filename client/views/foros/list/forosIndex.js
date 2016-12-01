@@ -9,7 +9,8 @@ Template.ForosIndex.onCreated(function () {
 
 Template.ForosIndex.helpers({
     foros:function () {
-        return ForosForm.find({},{sort:{createdAt: -1}}).fetch();
+        //cambio en find
+        return ForosForm.find({categori: Session.get('categori_filter')},{sort:{createdAt: -1}}).fetch();
     },
     //TOMAMOS EL OBJETO Y MOSTRAMOS SOLO EL TITULO
     categoria: function(){
@@ -21,7 +22,25 @@ Template.ForosIndex.helpers({
     createdAt: function(){
         console.log("createdAt: ", moment(this.createdAt).format('lll'));
          return moment(this.createdAt).format('lll');
-    }
+    },
+    categories: function (){
+    categories = [];
+    categoria_1 = {
+      value: "1",
+      text: "opción 1"
+    };
+    categoria_2 = {
+      value: "2",
+      text: "opción x"
+    };
+    categories.push(categoria_1);
+    categories.push(categoria_2);
+
+    categories_mongo = TemasForm.find().fetch();
+
+    console.log("categories: ", categories_mongo);
+    return categories_mongo;
+   }
 });
 
 Template.ForosIndex.events({
@@ -34,5 +53,8 @@ Template.ForosIndex.events({
         var current_event_foro_id = event.currentTarget.id;
         Session.set('current_foro_id', current_event_foro_id);
         FlowRouter.go('ForosRes');
+    },
+    'change select': function(event){
+        Session.set('categori_filter', event.value);
     }   
 });
