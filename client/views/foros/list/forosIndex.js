@@ -9,8 +9,9 @@ Template.ForosIndex.onCreated(function () {
 
 Template.ForosIndex.helpers({
     foros:function () {
-        //cambio en find
-        return ForosForm.find({categori: Session.get('categori_filter')},{sort:{createdAt: -1}}).fetch();
+        //cambio en find para buscar por categoria quemando el parametro
+        console.log("recuperar foros: ", ForosForm.find({"categoria" : Session.get("categori_filter")},{sort:{createdAt: -1}}).fetch());
+        return ForosForm.find({"categoria" : Session.get("categori_filter")},{sort:{createdAt: -1}}).fetch();
     },
     //TOMAMOS EL OBJETO Y MOSTRAMOS SOLO EL TITULO
     categoria: function(){
@@ -55,6 +56,8 @@ Template.ForosIndex.events({
         FlowRouter.go('ForosRes');
     },
     'change select': function(event){
-        Session.set('categori_filter', event.value);
+        Session.setPersistent("categori_filter", $( "#categories-select option:selected" ).val());
+        console.log("Take event:" + Session.get("categori_filter"));
+        console.log('id select: ', $( "#categories-select option:selected" ).val());
     }   
 });
