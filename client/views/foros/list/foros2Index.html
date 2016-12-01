@@ -1,6 +1,16 @@
 <Template name="ForosIndex">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <h4>  </h4>
-    <div class="foros-list">        
+    <div class="foros-list"> 
+
+        <div class="">
+          <select id="categories-select" class="browser-default" name="categori">
+            <option value="" disabled selected>Buscar por categoria</option>
+            {{#each categories}}
+              <option value={{_id}}>{{titulo_tema}}</option>
+            {{/each}}
+           </select>
+        </div>       
         <div class="card">
             <div class="card-content">
                 <table class="highlight responsive-table">

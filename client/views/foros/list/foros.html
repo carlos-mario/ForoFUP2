@@ -1,4 +1,5 @@
 <Template name="Foros">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <h4>Foros</h4>
     <div class="foros-list">        
         <div class="card">
@@ -7,17 +8,14 @@
                     <thead>
                     <tr>
                         <th data-field="id">titulo del foro</th>
-                        <th data-field="descripcion">Descripcion</th>
-                        <th data-field="fecha_creacion_foro">Fecha</th>
+                        <th ></th>
                     </tr>
                     </thead>
 
                     <tbody>
                     {{#each foros}}
                         <tr>
-                            <td>{{titulo_foro}}</td>
-                            <td>{{descripcion}}</td>
-                            <td>{{fecha_creacion_foro}}</td>
+                            <td>{{titulo_foro}}<td><td>{{createdAt}}</td>{{descripcion}}</td></td>
 							<td>
                                 <a href="/foros/{{_id}}" class="btn-floating red right-align">
                                     <i class="large material-icons">mode_edit</i>
