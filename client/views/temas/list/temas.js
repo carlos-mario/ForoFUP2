@@ -17,5 +17,4 @@ Template.Temas.events({
         console.log("add tema");
         FlowRouter.go('tema');
     }
-
 });
