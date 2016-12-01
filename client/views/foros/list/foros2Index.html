@@ -1,13 +1,24 @@
 <Template name="ForosIndex">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <h4>  </h4>
-    <div class="foros-list">        
+    <div class="foros-list"> 
+
+        <div class="">
+          <select id="categories-select" class="browser-default" name="categori">
+            <option value="" disabled selected>Buscar por categoria {{user}}</option>
+            {{#each categories}}
+              <option value={{_id}}>{{titulo_tema}}</option>
+            {{/each}}
+           </select>
+        </div>       
         <div class="card">
             <div class="card-content">
                 <table class="highlight responsive-table">
                     <thead>
                     <tr>
                         <th data-field="id">Titulo del foro</th> 
-                        <th data-field="descripcion">Categoria</th>                       
+                        <th data-field="descripcion">Categoria</th>  
+                        <th data-field="descripcion">Creador</th>                       
                         <th data-field="fecha_creacion_foro">Fecha</th>
                     </tr>
                     </thead>
@@ -17,6 +28,7 @@
                         <tr class="foro_info" id="{{_id}}">
                             <td>{{titulo_foro}}</td>
                             <td>{{categoria}}</td>
+                            <td>{{owner}}</td>
                             <td>{{createdAt}}</td>
                         </tr>
                     {{/each}}

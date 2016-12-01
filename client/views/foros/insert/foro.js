@@ -41,7 +41,8 @@ Template.Foro.events({
         titulo_foro: titulo_foro,
         descripcion: descripcion,
         //trae las categorias del select
-        categoria: $( "#categories-select option:selected" ).val(),      
+        categoria: $( "#categories-select option:selected" ).val(),  
+        owner: Meteor.userId(),    
         createdAt: new Date()        
       }
 

@@ -1,28 +1,24 @@
 <template name="ForosRes">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <div class="row">
         <form class="col s12">
 			<div class="row">
 				<div class="input-field col s12">
-				<h3 class="title">Foros</h3>
 					{{#each foros}}
-					<div class="input-field col s12">
-						<input disabled value="" id="titulo_foro" type="text" >
-						<label for="disabled">{{titulo_foro}}</label>
-					</div>
-					<div class="input-field col s12">
-						<input disabled value="" id="categoria" type="text">
-						<label for="disabled">{{categoria}}</label>							
-					</div>
-					<div class="input-field col s12">
-						<input disabled value="" id="descripcion" type="text">
-						<label for="disabled">{{descripcion}}</label>							
-					</div>
+					<h3 class="titleForoRes">{{titulo_foro}}</h3>	
+					<h7 class="categoriesForoRes">{{categoria}}</h7>				
+						<div class="input-field col s12">
+							
+							<label for="descripcion">{{descripcion}}
+							<div class="row right-align">
+								<a href="respuestas" class="waves-effect waves-light btn">Respuestas</a>
+							</div> 
+							</label>							
+						</div>
 					{{/each}}
 				</div>
 			</div>
-			<div class="row right-align">
-				<a href="respuestas" class="waves-effect waves-light btn">Responder</a>
-			</div> 
+			
 		</form>
     </div>
 </template>
