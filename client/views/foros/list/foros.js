@@ -10,8 +10,8 @@ Template.Foros.helpers({
         return ForosForm.find({categori: Session.get('categori_filter')},{sort:{createdAt: -1}}).fetch();
     },
     createdAt: function(){
-        console.log("createdAt: ", this);
-        return this.createdAt;
+        console.log("createdAt: ", moment(this.createdAt).format('lll'));
+         return moment(this.createdAt).format('lll');
     }
 });
 
