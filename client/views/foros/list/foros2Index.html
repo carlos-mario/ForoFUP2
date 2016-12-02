@@ -17,9 +17,12 @@
                     <thead>
                     <tr>
                         <th data-field="id">Titulo del foro</th> 
-                        <th data-field="descripcion">Categoria</th>  
-                        <th data-field="creador">Creador</th>                       
+                        <th data-field="descripcion">Categoria</th>                   
                         <th data-field="fecha_creacion_foro">Fecha</th>
+
+                        <div class="chip">
+   ingreso: {{> loginButtons}}  
+  </div>
                     </tr>
                     </thead>
 
@@ -28,13 +31,17 @@
                         <tr class="foro_info" id="{{_id}}">
                             <td>{{titulo_foro}}</td>
                             <td>{{categoria}}</td>
-                            <td>{{owner}}</td>
+                        
                             <td>{{createdAt}}</td>
+                            <td>{{owner}}</td>
                         </tr>
                     {{/each}}
                     </tbody>
                 </table>
             </div>
         </div>
+
     </div>
+
+
 </Template>

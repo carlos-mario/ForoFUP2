@@ -6,7 +6,12 @@ Template.Respuestas.onCreated(function () {
     });
 });
 
-Template.Respuestas.helpers({   
+Template.Respuestas.helpers({  
+   owner: function(){
+        console.log("user: ", this.owner, Meteor.users.find({_id: this.owner}).fetch()[0].emails[0].address);
+        var owner = Meteor.users.find({_id: this.owner}).fetch()[0];
+        return owner.emails[0].address;
+    }, 
     respuestas:function () {
         return RespuestasForm.find({},{sort:{createdAt: -1}}).fetch();
     },

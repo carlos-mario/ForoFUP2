@@ -6,11 +6,13 @@
                 <div class="row">
                     <table class="highlight responsive-table">       
                         <tbody>
+                        <div>
+                        <h7 class="owner">{{owner}}</h7>    
                             {{#each respuestas}}
                                 <tr>
                                     <!-- <td>{{id_respuesta}}</td> -->
                                     <td>{{contenido_respuesta}}
-                                        <td>                           
+                                        <td>   
                                             <a href="/respuestas/{{_id}}" class="btn-floating red right-align">
                                                 <i class="large material-icons">mode_edit</i>
                                             </a>
@@ -24,6 +26,7 @@
                                     </td>
                                 </tr>
                             {{/each}}
+                            </div>
                         </tbody>
                     </table>
                  </div>            
