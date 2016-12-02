@@ -20,16 +20,14 @@ Template.EditTema.events({
     'submit': function (event) {
         event.preventDefault();
         var id_tema = event.target.id_tema.value;
-        var titulo_tema = event.target.titulo_tema.value;
-    
+        var titulo_tema = event.target.titulo_tema.value;    
 
         var tema_updated = {
             id: FlowRouter.getParam('id'),
             params: {
                 $set: {
 					id_tema: id_tema, 
-					titulo_tema: titulo_tema
-		
+					titulo_tema: titulo_tema		
                 }
             }
         }

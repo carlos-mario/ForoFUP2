@@ -7,13 +7,13 @@ Template.Respuestas.onCreated(function () {
 });
 
 Template.Respuestas.helpers({  
-   owner: function(){
+    owner: function(){
         console.log("user: ", this.owner, Meteor.users.find({_id: this.owner}).fetch()[0].emails[0].address);
         var owner = Meteor.users.find({_id: this.owner}).fetch()[0];
         return owner.emails[0].address;
     }, 
     respuestas:function () {
-        return RespuestasForm.find({},{sort:{createdAt: -1}}).fetch();
+         return RespuestasForm.find({"foro" : Session.get('current_foro_id')},{sort:{createdAt: -1}}).fetch();
     },
     createdAt: function(){
         console.log("createdAt: ", this);
@@ -35,7 +35,7 @@ Template.Respuestas.events({
     'click .like': function(event){
         event.preventDefault();
         
-        var current_user_id = '123456813';
+        var current_user_id = Meteor.userId();
         var current_event_id = event.currentTarget.id;
         params = {  id: current_event_id, 
                     params: {   $inc: { likes: 1 },  

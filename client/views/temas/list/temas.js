@@ -9,7 +9,6 @@ Template.Temas.helpers({
     temas:function () {
         return TemasForm.find({},{sort:{createdAt: -1}}).fetch();
     }
-
 });
 
 Template.Temas.events({

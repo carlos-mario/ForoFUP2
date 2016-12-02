@@ -46,5 +46,4 @@ Template.EditForo.events({
         Meteor.call('ForosForm.remove', {_id:FlowRouter.getParam('id')});
         FlowRouter.go('foros');
     }
-
 });

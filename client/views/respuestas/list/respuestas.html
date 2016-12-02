@@ -7,11 +7,14 @@
                     <table class="highlight responsive-table">       
                         <tbody>
                         <div>
-                        <h7 class="owner">{{owner}}</h7>    
+                           
                             {{#each respuestas}}
                                 <tr>
                                     <!-- <td>{{id_respuesta}}</td> -->
                                     <td>{{contenido_respuesta}}
+                                        <div class="chip">    
+                                             <h7 class="owner">{{owner}}</h7> 
+                                        </div>
                                         <td>   
                                             <a href="/respuestas/{{_id}}" class="btn-floating red right-align">
                                                 <i class="large material-icons">mode_edit</i>

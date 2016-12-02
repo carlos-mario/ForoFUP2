@@ -2,7 +2,6 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <h4>  </h4>
     <div class="foros-list"> 
-
         <div class="">
           <select id="categories-select" class="browser-default" name="categori">
             <option value="" disabled selected>Buscar por categoria {{user}}</option>
@@ -19,13 +18,11 @@
                         <th data-field="id">Titulo del foro</th> 
                         <th data-field="descripcion">Categoria</th>                   
                         <th data-field="fecha_creacion_foro">Fecha</th>
-
                         <div class="chip">
-   ingreso: {{> loginButtons}}  
-  </div>
+                            Sesión: {{> loginButtons}}  
+                        </div>
                     </tr>
                     </thead>
-
                     <tbody>
                     {{#each foros}}
                         <tr class="foro_info" id="{{_id}}">
@@ -40,8 +37,5 @@
                 </table>
             </div>
         </div>
-
     </div>
-
-
 </Template>

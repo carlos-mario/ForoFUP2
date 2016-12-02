@@ -20,7 +20,8 @@ Template.Respuesta.events({
 
         // id_respuesta: id_respuesta, 
         contenido_respuesta: contenido_respuesta,
-        // fecha_respuesta: fecha_respuesta,
+        foro :  Session.get('current_foro_id'),
+        owner: Meteor.userId(), 
         createdAt: new Date()        
       }
 

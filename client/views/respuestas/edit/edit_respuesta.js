@@ -21,8 +21,7 @@ Template.EditRespuesta.events({
         event.preventDefault();
         // var id_respuesta = event.target.id_respuesta.value;
         var contenido_respuesta = event.target.contenido_respuesta.value;
-        // var fecha_respuesta = event.target.fecha_respuesta.value;
- 
+        // var fecha_respuesta = event.target.fecha_respuesta.value; 
 
         var respuesta_updated = {
             id: FlowRouter.getParam('id'),

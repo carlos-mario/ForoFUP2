@@ -25,7 +25,6 @@ Template.Foro.helpers({
     console.log("categories: ", categories_mongo);
     return categories_mongo;
    }
-
 });
 
 Template.Foro.events({

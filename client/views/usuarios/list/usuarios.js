@@ -9,7 +9,6 @@ Template.Usuarios.helpers({
     usuarios:function () {
         return UsuariosForm.find({},{sort:{createdAt: -1}}).fetch();
     }
-
 });
 
 Template.Usuarios.events({
